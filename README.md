@@ -14,8 +14,7 @@ In general you want to have an SSL Certificate created for a online web service,
 Now the new certbot container needs to be hooked into the rest of your infrastructure. This can be done with compose, or directly with the docker command:
 
 ```
-./certbot-auto certonly --config-dir /data/certs --agree-tos --renew-by-default --no-eff-email --email email@domain.com --webroot -w /data/www/public_html -d domain1.com -d www.domain1.com
-
+./certbot-auto certonly --config-dir /certs --agree-tos --renew-by-default --no-eff-email --email email@domain.com --webroot -w /data/www/public_html -d domain1.com -d www.domain1.com
 ```
 
 In the above example certbot is expecting the ablilty to modify your webroot directly, certbot will need public access to verify the DNS is correctly pointing to the same host a valid SSL certificate will be generated on. It writes a little proof to the web directory.

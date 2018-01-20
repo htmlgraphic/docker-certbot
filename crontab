@@ -1,1 +1,1 @@
-6,18 * * * sleep $(expr $RANDOM % 55)m; /./certbot-auto renew --config-dir /data/certs --quiet --no-self-upgrade
+6,18 * * * sleep $(expr $RANDOM % 55)m; /./certbot-auto renew --config-dir /certs --quiet --no-self-upgrade
